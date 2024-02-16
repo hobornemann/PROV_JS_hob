@@ -20,9 +20,20 @@ const modelPrices = {
   
   function calculateTotalPrice(shoppingCart, prices) {
     // Din kod här
-    
+    let totalPrice = 0;
+    shoppingCart.map(gearItem => {
+      const model = gearItem.model;
+      console.log("model", model)
+      if(prices[model]){
+        const price = prices[model]
+        console.log("price",price)
+        totalPrice += price;  
+      }
+    })
+    return totalPrice;
   }
   
+  console.log(calculateTotalPrice(cameraGear, modelPrices));
 
   // Test
   // console.log(calculateTotalPrice(cameraGear, modelPrices)); // Ska logga 550
