@@ -5,9 +5,10 @@
   
   function combineArrays(arr1, arr2) {
     // Din kod här.
- 
+    return [...arr1, ...arr2];
   }
   
+  console.log(combineArrays([1, 2, 3], [4, 5, 6]));
 
   //Test
   //console.log(combineArrays([1, 2, 3], [4, 5, 6])); // Ska logga [1, 2, 3, 4, 5, 6]
