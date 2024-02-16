@@ -16,9 +16,18 @@ const movies = [
 ]
 
 // Din kod här:
+function generateList(objArray){
+    let html = "<ul>";
+    objArray.map(item => {
+        html += `
+            <li>${item.title} (${item.year})</li>
+        `
+    })
+    html += "</ul>"
+    return html; 
+}
 
-
-
+console.log(generateList(movies))
 
 
 // Test 
